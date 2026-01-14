@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+  display: flex;
+  width: 80vw;
+  height: 100vh;
+  margin: 1rem auto;
+  flex-direction: column;
+  border: 2px solid black;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.apology-span {
+  color: blue;
+  text-decoration: underline;
+  user-select: none;
+  cursor: pointer;
+}
+
+.apology-span:hover {
+  color: darkblue;
+}
+
+.apology-message {
+  font-size: 1rem;
+  font-family: serif;
+  width: 200vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.apology-href {
+  font-size: 0.875rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.125rem 0.3rem;
+  background-color: #09080d;
+  color: #bcb3d1;
+  border: 1.5px solid #251f33;
+  border-radius: 1px;
+  opacity: 0;
+  transition: opacity 150ms ease-in;
+}
+
+.apology-href.visible {
+  opacity: 1;
+}
+
+.close-apology-btn {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 10rem;
+  background-color: red;
+}
