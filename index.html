@@ -8,7 +8,7 @@
   </head>
   <body>
     <main>
-      <section class="form-header">
+      <section id="formHeader" class="form-header">
         <h1>Welcome to our feedback form!</h1>
         <p>
           Before proceeding, please read our
@@ -16,7 +16,17 @@
         </p>
       </section>
       <div class="line" />
+      <section class="form-personal-info">
+        <div class="form-personal-camp">
+          <label>Your name</label>
+          <input type="text" />
+        </div>
+        <div class="form-personal-camp">
+          <input class="label-input" type="text" placeholder="Your name" />
+          <label id="inputLabel" class="input-label">Your name</label>
+        </div>
+      </section>
     </main>
   </body>
-  <script src="index.js"></script>
+  <script type="module" src="index.js"></script>
 </html>
