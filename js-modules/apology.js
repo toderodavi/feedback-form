@@ -9,22 +9,25 @@ export function apologyModule() {
     apologyMessage.textContent = await response.text()
     formHeader.append(apologyMessage)
 
+    // Function to create button that deletes all messages
+    // But the button itself keeps there (lots of it actually)
     setTimeout(() => {
       const closeBtn = document.createElement('button')
-      const existingMessage = document.querySelector('.apology-message')
+      const existingMessages = document.querySelectorAll('.apology-message')
       closeBtn.className = 'close-apology-btn'
       closeBtn.textContent = 'X'
       formHeader.append(closeBtn)
       closeBtn.onclick = () => {
-        existingMessage.remove()
+        for (const existingMessage of existingMessages) {
+          existingMessage.remove()
+        }
       }
-    }, 7000)
+    }, 15000)
   }
 
   apologySpan.addEventListener('click', apologyMessage)
   apologySpan.addEventListener('mouseenter', () => {
     const apologyHref = document.createElement('p')
-    // prob change this content later
     apologyHref.textContent = 'https://feedback-form/apology.html'
     apologyHref.className = 'apology-href'
     formHeader.append(apologyHref)
