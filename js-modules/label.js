@@ -1,18 +1,21 @@
 export function label() {
-  const label = document.querySelector('#inputLabel')
-  const inputIndicator = document.createElement('div')
-  inputIndicator.textContent = '|'
-  inputIndicator.className = 'input-indicator'
-  label.addEventListener('click', () => {
-    label.classList.add('click')
-    label.append(inputIndicator)
-  })
+  const labels = document.querySelectorAll('.input-label')
 
-  document.addEventListener('click', (event) => {
-    event.stopPropagation()
-    if (!label.contains(event.target)) {
-      label.classList.remove('click')
-      inputIndicator.remove()
-    }
-  })
+  for (const label of labels) {
+    const inputIndicator = document.createElement('div')
+    inputIndicator.textContent = '|'
+    inputIndicator.className = 'input-indicator'
+    label.addEventListener('click', () => {
+      label.classList.add('focus')
+      label.append(inputIndicator)
+    })
+
+    document.addEventListener('click', (event) => {
+      event.stopPropagation()
+      if (!label.contains(event.target)) {
+        label.classList.remove('focus')
+        inputIndicator.remove()
+      }
+    })
+  }
 }

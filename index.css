@@ -1,3 +1,18 @@
+@keyframes blinkingInputIndicator {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -95,14 +110,16 @@ main {
   display: flex;
   flex-direction: column;
   margin: 1rem 2rem;
+  gap: 0.2rem;
 }
 
 .input-label {
   position: relative;
+  user-select: none;
   width: 100%;
   height: 100%;
   font-size: 13.4px;
-  padding-left: 1px;
+  padding: 2px 4px;
   color: gray;
   border: 1px solid rgb(118, 118, 118);
 }
@@ -112,16 +129,37 @@ main {
   border-color: #26a0da;
 }
 
-.input-label.click {
-  border: 2px solid black;
-  border-radius: 3px;
+.input-label.focus {
+  border-color: transparent;
+  outline: 2px solid black;
+  border-radius: 1px;
 }
 
 .input-indicator {
   position: absolute;
   left: 0;
   top: 0;
-  margin: -6px 0px 0px -1.8px;
-  font-size: 18px;
+  margin: -8px 0px 0px -3px;
+  font-size: 21px;
+  color: black;
+
+  animation-name: blinkingInputIndicator;
+  animation-duration: 1.1s;
+  animation-iteration-count: infinite;
+}
+
+.label-input {
+  font-size: 1rem;
+  border: none;
+  padding-block: 0;
+  padding-inline: 0;
+  cursor: default;
+}
+
+.label-input:focus {
+  outline: none;
+}
+
+.label-input::placeholder {
   color: black;
 }
