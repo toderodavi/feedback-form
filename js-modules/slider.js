@@ -7,7 +7,7 @@ export function numberSlider() {
   slider.min = 0
   slider.max = 999999999
   slider.className = 'number-slider'
-  sliderValueDisplay.className = 'number-value'
+  sliderValueDisplay.className = 'number-value-display'
 
   labelToBeRemoved.addEventListener('click', () => {
     labelToBeRemoved.remove()
@@ -15,7 +15,10 @@ export function numberSlider() {
     parentElement.append(sliderValueDisplay)
   })
 
-  slider.oninput = () => {
+  function valueDisplayPosition() {
+    // Logic to find the aproximate slider thumb position
+    // The thumbWidth can be different for every browser.
+    // The consistent result here was made for Opera
     const min = parseFloat(slider.min)
     const max = parseFloat(slider.max)
     const value = parseFloat(slider.value)
@@ -28,4 +31,13 @@ export function numberSlider() {
     sliderValueDisplay.textContent = slider.value
     sliderValueDisplay.style.left = `${thumbPosition}px`
   }
+
+  // Changes the display position on input
+  slider.addEventListener('input', valueDisplayPosition)
+
+  // Changes the display position when the slider gets wider
+  const resizeObserver = new ResizeObserver(() => {
+    valueDisplayPosition()
+  })
+  resizeObserver.observe(slider)
 }
