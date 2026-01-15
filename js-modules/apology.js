@@ -22,7 +22,7 @@ export function apologyModule() {
           existingMessage.remove()
         }
       }
-    }, 15000)
+    }, 8000)
   }
 
   apologySpan.addEventListener('click', apologyMessage)
