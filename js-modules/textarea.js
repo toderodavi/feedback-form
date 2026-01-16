@@ -6,7 +6,7 @@ export function textAreaFeedback() {
   let dialogueIndex = 0
   const dialogue = [
     '(＃°Д°) Wait!',
-    'Uhh... You know...',
+    '(°ー°〃) Uhh...',
     '（*゜ー゜*） It has been some time since someone came here!',
     "(°ー°〃) You know, it's not like much people have something to give feedback about...",
     '(。_。)',
@@ -15,11 +15,11 @@ export function textAreaFeedback() {
     '(⊙_⊙;)',
     '（⊙ｏ⊙）',
     '(⊙_(⊙_⊙)_⊙)',
-    'Σ(っ °Д °;)っ I forgot that I closed the input thingie!',
-    "ε=ε=ε=┏(゜ロ゜;)┛ I'll be right back!",
+    'Σ(っ °Д °;)っ I forgor! I closed the input thingie!',
+    "ε=ε=ε=┏(゜ロ゜;)┛ I'll b right back!",
     '...',
     '. . .',
-    '.  .  .',
+    '. . . .',
     'o(><；)oo Here!',
     "つ﹏⊂ Sorry about this... I won't get in your way...",
     'つ﹏⊂',
