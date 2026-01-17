@@ -24,6 +24,8 @@ export function textAreaFeedback() {
     "つ﹏⊂ Sorry about this... I won't get in your way...",
     'つ﹏⊂',
     'つ﹏°',
+    'つ﹏° ... You will not inject SQL... right?',
+    'つ﹏°',
   ]
 
   function startTextAreaDialogue(event) {

@@ -18,7 +18,7 @@ export function moveBtn() {
       }
     }
     if (!document.getElementById('positionOverride')) {
-      disclaimerP.textContent = "So, I don't know enough of DOM to make this work again now"
+      disclaimerP.textContent = "So, I don't know enough of DOM to make this work again, I accept pull requests in: https://github.com/toderodavi/feedback-form"
       disclaimerP.className = 'disclaimer-p'
       document.body.append(disclaimerP)
     }
