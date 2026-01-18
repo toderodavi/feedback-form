@@ -297,12 +297,12 @@ main {
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 80px;
+  right: 80px;
   cursor: pointer;
 
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 50%;
   background: black;
   color: white;
