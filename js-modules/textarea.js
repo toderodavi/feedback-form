@@ -48,6 +48,10 @@ export function textAreaFeedback() {
       feedbackTalk.textContent = currentDialogue
       dialogueIndex++
     }
+    if (dialogueIndex >= dialogue.length) {
+      const submitButton = document.querySelector('.submit-button')
+      submitButton.disabled = false
+    }
   }
 
   textarea.addEventListener('click', startTextAreaDialogue)

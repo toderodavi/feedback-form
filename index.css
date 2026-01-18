@@ -45,6 +45,16 @@
   }
 }
 
+@keyframes finalTextsFadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -299,21 +309,109 @@ main {
   position: fixed;
   bottom: 80px;
   right: 80px;
+  z-index: 9999;
   cursor: pointer;
 
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
   background: black;
+  border: 4px solid rgb(118, 118, 118);
   color: white;
 }
 
 .disclaimer-p {
   color: red;
   position: fixed;
-  bottom: 50px;
+  top: 68vh;
   right: 50px;
 
   animation-name: disclaimerTextAppearing;
   animation-duration: 5s;
+}
+
+.form-submit {
+  display: flex;
+}
+
+.submit-button {
+  width: 100%;
+  height: 3rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #098de6;
+
+  border-radius: 0.5rem;
+}
+
+.submit-button:hover {
+  background-color: #26a0da;
+}
+
+.submit-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.submit-button.position-01 {
+  position: absolute;
+  top: 100px;
+  right: 90px;
+}
+
+.submit-button.position-02 {
+  position: absolute;
+  bottom: 10px;
+  left: 110px;
+}
+
+.submit-button.position-03 {
+  position: absolute;
+  top: 50vh;
+  left: 25vw;
+}
+
+.textarea-holds-button {
+  pointer-events: none;
+  position: absolute;
+  font-size: 1.25rem;
+  background-color: rgb(255, 255, 255, 0.8);
+  top: 52vh;
+  left: 3.5vw;
+}
+
+.black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  height: 100vh;
+  width: 100vw;
+
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  z-index: 9999;
+}
+
+.final-message-01 {
+  animation-name: finalTextsFadein;
+  animation-duration: 3s;
+}
+
+.final-message-02 {
+  color: white;
+  animation-name: finalTextsFadein;
+  animation-duration: 25s;
+}
+
+.final-message-03 {
+  color: white;
+  animation-name: finalTextsFadein;
+  animation-duration: 40s;
 }
