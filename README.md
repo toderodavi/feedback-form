@@ -6,4 +6,6 @@ This project was made for the Borked UI Jam! As the jam's idea was to create the
 
 While said jokingly, I will in fact review pull requests if someone is insane enough to look through this code and make sense of it (it isn't that bad but could be a lot better)
 
+AI Usage: AI was used to create the apology letter
+
 (￣▽￣)つ Bye~~!
