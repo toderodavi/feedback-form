@@ -7,7 +7,7 @@ export function apologyOverlay() {
     const apologyParagraph = document.createElement('p')
     apologyParagraph.className = 'apology-paragraph'
     apologyParagraph.textContent = await response.text()
-    formHeaderSection.append(apologyParagraph)
+    document.body.append(apologyParagraph)
 
     // Function to create button that deletes all apology paragraphs
     // But the button itself keeps there
