@@ -88,6 +88,10 @@ main {
   background-color: rgb(218, 220, 224);
 }
 
+/* 
+Form Header Section
+*/
+
 .form-header {
   display: flex;
   flex-direction: column;
@@ -105,49 +109,70 @@ main {
   color: darkblue;
 }
 
-.apology-message {
-  font-size: 0.9rem;
-  font-family: serif;
-  color: black;
-  width: 180vw;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 5;
-}
-
 .apology-href {
-  font-size: 0.875rem;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   padding: 0.125rem 0.3rem;
-  background-color: #09080d;
+  font-size: 0.875rem;
   color: #bcb3d1;
+  background-color: #09080d;
   border: 1.5px solid #251f33;
-  border-radius: 1px;
   opacity: 0;
-  transition: opacity 150ms ease-in;
+  transition: opacity 300ms cubic-bezier(0, -0.25, 0.64, 1);
 }
 
-.apology-href.visible {
+/* 
+Small CSS Class: CSS Combinators
+A + B = Affects the next sibling of A
+A ~ B = Affects all next siblings of A
+A B = Affects all descendents of A
+A > B = Affect the direct children of A
+
+The first version of the false href was made
+usign JS. This time, I will be testing with A + B
+(o゜▽゜)o☆ secret star for anyone reading this~~
+*/
+
+p:has(.apology-span:hover) + .apology-href {
   opacity: 1;
 }
 
-.close-apology-btn {
+.apology-paragraph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+  font-family: serif;
+  color: black;
+  width: 180vw;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 
+Below is a way of making a triangle in html with css.
+The idea was to make a weird button
+*/
+
+.close-apology-paragraph-button {
   position: fixed;
   font-size: 3rem;
-  right: 0;
-  top: 0;
-  width: 0rem;
+  font-family: Times;
+  right: 4rem;
+  top: 1rem;
+  width: 0vw;
   height: 0vh;
   color: red;
   border: solid 90px;
   border-color: transparent transparent transparent white;
   cursor: pointer;
-  z-index: 9;
+  z-index: 2;
 }
+
+/*
+Form User Section
+*/
 
 .form-user-info {
   display: flex;
@@ -268,6 +293,10 @@ main {
   background-color: white;
   color: black;
 }
+
+/*
+Form Feedback Section
+*/
 
 .form-feedback-report {
   display: flex;
