@@ -363,8 +363,8 @@ Form Feedback Section
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 80px;
-  right: 80px;
+  bottom: 7vh;
+  right: 7vw;
   z-index: 9999;
   cursor: pointer;
 
@@ -376,11 +376,11 @@ Form Feedback Section
   color: white;
 }
 
-.disclaimer-p {
+.disclaimer-paragraph {
   color: red;
   position: fixed;
   top: 68vh;
-  right: 50px;
+  right: 1vw;
 
   animation-name: disclaimerTextAppearing;
   animation-duration: 5s;
