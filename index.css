@@ -325,7 +325,7 @@ Form User Section
 Form Feedback Section
 */
 
-.form-feedback-report {
+.form-feedback {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -340,19 +340,19 @@ Form Feedback Section
 }
 
 .textarea-feedback {
-  height: 250px;
+  height: 15rem;
   animation-name: textAreaIsBack;
-  animation-duration: 1.5s;
+  animation-duration: 4.5s;
 }
 
-.textarea-shy {
+.textarea-feedback.shy {
   width: 10px;
   height: 10px;
   outline: 2px solid black;
   resize: none;
 }
 
-.feedback-talk {
+.feedback-dialogue {
   color: rgb(250, 128, 114);
   font: 1.25rem;
   user-select: none;
