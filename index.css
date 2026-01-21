@@ -1,3 +1,13 @@
+@keyframes rainbowGrowing {
+  0% {
+    filter: blur(1px);
+  }
+
+  100% {
+    filter: blur(255px);
+  }
+}
+
 @keyframes blinkingInputIndicator {
   0% {
     opacity: 1;
@@ -52,16 +62,6 @@
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes rainbowGrowing {
-  0% {
-    filter: blur(1px);
-  }
-
-  100% {
-    filter: blur(255px);
   }
 }
 
@@ -207,7 +207,7 @@ Form User Section
   gap: 0.75rem;
 }
 
-.form-fields-wrapper {
+.form-user-fields-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -220,24 +220,23 @@ Form User Section
   gap: 0.2rem;
 }
 
-.input-label {
+.fake-input {
   position: relative;
   user-select: none;
   width: 100%;
-  height: 100%;
-  font-size: 13.4px;
-  padding: 2px 4px;
+  font-size: 0.875rem;
+  padding: 2px 6px;
   color: gray;
   border: 1px solid rgb(118, 118, 118);
   border-radius: 3px;
 }
 
-.input-label:hover {
+.fake-input:hover {
   cursor: text;
   border-color: #26a0da;
 }
 
-.input-label.focus {
+.fake-input.focus {
   border-color: transparent;
   outline: 2px solid black;
   border-radius: 1px;
@@ -245,18 +244,19 @@ Form User Section
 
 .input-indicator {
   position: absolute;
-  left: 0;
-  top: 0;
-  margin: -8px 0px 0px -3.2px;
-  font-size: 23px;
-  color: black;
+  left: 0px;
+  top: 50%;
+  width: 1px;
+  height: 110%;
+  transform: translateY(-50%);
+  background-color: black;
 
   animation-name: blinkingInputIndicator;
   animation-duration: 1.1s;
   animation-iteration-count: infinite;
 }
 
-.label-input {
+.fake-label {
   font-size: 1rem;
   border: none;
   padding-block: 0;
@@ -264,15 +264,15 @@ Form User Section
   cursor: default;
 }
 
-.label-input:focus {
+.fake-label:focus {
   outline: none;
 }
 
-.label-input:disabled {
+.fake-label:disabled {
   background-color: white;
 }
 
-.label-input::placeholder {
+.fake-label::placeholder {
   color: black;
 }
 
