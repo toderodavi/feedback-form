@@ -1,8 +1,8 @@
 export function textAreaFeedback() {
-  const textarea = document.querySelector('.textarea-feedback')
+  const textArea = document.querySelector('.textarea-feedback')
   const parentElement = document.querySelector('.form-feedback-field')
-  const feedbackTalk = document.createElement('p')
-  feedbackTalk.className = 'feedback-talk'
+  const feedbackDialogueParagraph = document.createElement('p')
+  feedbackDialogueParagraph.className = 'feedback-dialogue'
   let dialogueIndex = 0
   const dialogue = [
     '(＃°Д°) Wait!',
@@ -12,18 +12,14 @@ export function textAreaFeedback() {
     '(。_。)',
     '(⊙ˍ⊙)',
     '(⊙_⊙)？',
-    '(⊙_⊙;)',
     '（⊙ｏ⊙）',
-    '(⊙_(⊙_⊙)_⊙)',
     'Σ(っ °Д °;)っ I forgor! I closed the input thingie!',
     "ε=ε=ε=┏(゜ロ゜;)┛ I'll b right back!",
     '...',
     '. . .',
-    '. . . .',
     'o(><；)oo Here!',
     "つ﹏⊂ Sorry about this... I won't get in your way...",
     'つ﹏⊂',
-    'つ﹏°',
     'つ﹏° ... You will not inject SQL... right?',
     'つ﹏°',
   ]
@@ -31,28 +27,27 @@ export function textAreaFeedback() {
   function startTextAreaDialogue(event) {
     event.stopPropagation()
 
-    textarea.className = 'textarea-shy'
-    parentElement.append(feedbackTalk)
+    textArea.classList.add('shy')
+    parentElement.append(feedbackDialogueParagraph)
     advanceTextAreaDialogue()
 
-    textarea.removeEventListener('click', startTextAreaDialogue)
+    textArea.removeEventListener('click', startTextAreaDialogue)
     parentElement.addEventListener('click', advanceTextAreaDialogue)
   }
 
   function advanceTextAreaDialogue() {
     if (dialogueIndex < dialogue.length) {
-      if (dialogueIndex === 15) {
-        textarea.className = 'textarea-feedback'
+      if (dialogueIndex === 12) {
+        textArea.classList.remove('shy')
       }
       const currentDialogue = dialogue[dialogueIndex]
-      feedbackTalk.textContent = currentDialogue
+      feedbackDialogueParagraph.textContent = currentDialogue
       dialogueIndex++
     }
-    if (dialogueIndex >= dialogue.length) {
+    if (dialogueIndex === 13) {
       const submitButton = document.querySelector('.submit-button')
       submitButton.disabled = false
     }
   }
-
-  textarea.addEventListener('click', startTextAreaDialogue)
+  textArea.addEventListener('click', startTextAreaDialogue)
 }

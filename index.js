@@ -1,13 +1,13 @@
-import { apologyModule } from './js-modules/apology.js'
-import { label } from './js-modules/label.js'
-import { moveBtn } from './js-modules/moveBtn.js'
-import { numberSlider } from './js-modules/slider.js'
+import { apologyOverlay } from './js-modules/apologyOverlay.js'
+import { labelAsInput } from './js-modules/labelAsInput.js'
+import { moveButton } from './js-modules/moveButton.js'
+import { numberSlider } from './js-modules/numberSlider.js'
 import { submitBtn } from './js-modules/submitBtn.js'
-import { textAreaFeedback } from './js-modules/textarea.js'
+import { textAreaFeedback } from './js-modules/textAreaFeedback.js'
 
-apologyModule()
-label()
+apologyOverlay()
+labelAsInput()
 numberSlider()
 textAreaFeedback()
-moveBtn()
+moveButton()
 submitBtn()

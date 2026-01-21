@@ -1,5 +1,5 @@
 export function numberSlider() {
-  const labelToBeRemoved = document.querySelector('#fakeLabelForSlider')
+  const labelToBeRemoved = document.querySelector('#fakeInputForSlider')
   const parentElement = document.querySelector('#numberSliderDiv')
   const slider = document.createElement('input')
   const sliderValueDisplay = document.createElement('div')
@@ -16,9 +16,9 @@ export function numberSlider() {
   })
 
   function valueDisplayPosition() {
-    // Logic to find the aproximate slider thumb position
-    // The thumbWidth can be different for every browser.
-    // The consistent result here was made for Opera
+    // Logic to find the aproximate slider thumb position.
+    // As the thumbWidth can be different for every browser,
+    // the result here was tested in Opera
     const min = parseFloat(slider.min)
     const max = parseFloat(slider.max)
     const value = parseFloat(slider.value)
