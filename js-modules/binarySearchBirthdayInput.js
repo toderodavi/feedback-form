@@ -1,4 +1,4 @@
-export function binarySearchBirthday() {
+export function binarySearchBirthdayInput() {
   const fakeBirthdayInput = document.getElementById('fakeDateOfBirth')
   const binarySearchWrapperDiv = document.querySelector('.binary-search-birthday-wrapper')
   const valueDisplayParagraph = document.getElementById('valueBinarySearch')

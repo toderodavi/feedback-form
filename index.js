@@ -1,5 +1,6 @@
 import { apologyOverlay } from './js-modules/apologyOverlay.js'
-import { binarySearchBirthday } from './js-modules/binarySearchBirthday.js'
+import { binarySearchBirthdayInput } from './js-modules/binarySearchBirthdayInput.js'
+import { colorSelectOptions } from './js-modules/colorSelect.js'
 import { labelAsInput } from './js-modules/labelAsInput.js'
 import { moveButton } from './js-modules/moveButton.js'
 import { numberSlider } from './js-modules/numberSlider.js'
@@ -11,5 +12,6 @@ labelAsInput()
 numberSlider()
 textAreaFeedback()
 moveButton()
-binarySearchBirthday()
+binarySearchBirthdayInput()
+colorSelectOptions()
 submitBtn()
