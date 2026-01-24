@@ -61,4 +61,28 @@ export function colorSelectOptions() {
       colorSelect.append(newColorOption)
     }
   }, 50)
+
+  function mouseTrail() {
+    let mousePosition
+    window.onmousemove = (e) => {
+      mousePosition = {
+        x: e.x,
+        y: e.y,
+      }
+      const mouseTrailDot = document.createElement('div')
+      mouseTrailDot.className = 'mouse-trail-dot'
+      mouseTrailDot.style.left = `${mousePosition.x}px`
+      mouseTrailDot.style.top = `${mousePosition.y}px`
+      mouseTrailDot.style.backgroundColor = colorSelect.value
+      document.body.append(mouseTrailDot)
+
+      setTimeout(() => {
+        mouseTrailDot.remove()
+      }, 500)
+    }
+  }
+
+  colorSelect.addEventListener('input', () => {
+    mouseTrail()
+  })
 }
