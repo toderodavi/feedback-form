@@ -1,11 +1,11 @@
-export function submitBtn() {
+export function submitButton() {
   const submitButton = document.querySelector('.submit-button')
   const newTextAreaDialogue = document.createElement('p')
 
   function submitForm() {
-    const textAreaDialogue = document.querySelector('.feedback-talk')
+    const textAreaDialogue = document.querySelector('.feedback-dialogue')
     textAreaDialogue.remove()
-    newTextAreaDialogue.classList.add('feedback-talk')
+    newTextAreaDialogue.classList.add('feedback-dialogue')
     newTextAreaDialogue.classList.add('textarea-holds-button')
     newTextAreaDialogue.textContent = "I'm holding! Click it! (。;>︿<)_θ"
     document.body.append(newTextAreaDialogue)
@@ -21,7 +21,7 @@ export function submitBtn() {
     const finalMessage02 = document.createElement('p')
     const finalMessage03 = document.createElement('p')
     blackOverlay.className = 'black-overlay'
-    finalMessage01.className = 'feedback-talk'
+    finalMessage01.className = 'feedback-dialogue'
     finalMessage01.classList.add('final-message-01')
     finalMessage02.className = 'final-message-02'
     finalMessage03.className = 'final-message-03'

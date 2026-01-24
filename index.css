@@ -102,7 +102,7 @@ main::before {
 
   background: linear-gradient(to bottom right, red, orange, yellow, green, blue, indigo, violet);
   animation-name: rainbowGrowing;
-  animation-duration: 2100s;
+  animation-duration: 2000s;
 
   z-index: -1;
 }
