@@ -387,6 +387,18 @@ Form Feedback Section
   height: 100%;
 }
 
+.first-todo {
+  color: #69737c;
+}
+
+.second-todo {
+  color: black;
+}
+
+.third-todo {
+  color: blue;
+}
+
 .textarea-feedback {
   height: 15rem;
   animation-name: textAreaIsBack;
@@ -394,6 +406,7 @@ Form Feedback Section
 }
 
 .textarea-feedback.shy {
+  overflow: hidden;
   width: 10px;
   height: 10px;
   outline: 2px solid black;
