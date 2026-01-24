@@ -17,10 +17,7 @@ export function submitButton() {
     newTextAreaDialogue.textContent = "I'm holding! Click it! (。;>︿<)_θ"
     newTextAreaDialogue.style.top = `${randomY - newTextAreaDialogue.offsetHeight * -0.75}px`
     newTextAreaDialogue.style.left = `${randomX - newTextAreaDialogue.offsetWidth}px`
-    setTimeout(() => {
-      submitButton.disabled = false
-      submitButton.addEventListener('click', blackScreen)
-    }, 1500)
+    submitButton.addEventListener('click', blackScreen)
   }
 
   function randomlyMoveButton() {
@@ -30,7 +27,7 @@ export function submitButton() {
     let randomY = Math.floor(Math.random() * height) + 1
     count++
 
-    if (count >= 5) {
+    if (count >= 7) {
       submitForm(randomX, randomY)
     }
     submitButton.style.position = 'fixed'
