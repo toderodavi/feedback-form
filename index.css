@@ -476,7 +476,7 @@ Form Feedback Section
   pointer-events: none;
   position: fixed;
   font-size: 1.25rem;
-  background-color: rgb(255, 255, 255, 0.8);
+  background-color: rgb(255, 255, 255);
 }
 
 .black-overlay {
@@ -503,12 +503,5 @@ Form Feedback Section
 
 .final-message-02 {
   color: white;
-  animation-name: finalTextsFadein;
-  animation-duration: 25s;
-}
-
-.final-message-03 {
-  color: white;
-  animation-name: finalTextsFadein;
-  animation-duration: 40s;
+  opacity: 0.1;
 }
