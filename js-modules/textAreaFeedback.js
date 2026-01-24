@@ -6,21 +6,16 @@ export function textAreaFeedback() {
   let dialogueIndex = 0
   const dialogue = [
     '(＃°Д°) Wait!',
-    '(°ー°〃) Uhh...',
     '（*゜ー゜*） It has been some time since someone came here!',
-    "(°ー°〃) You know, it's not like much people have something to give feedback about...",
+    '(°ー°〃) Ideally, people give up before reaching this textarea...',
     '(。_。)',
     '(⊙ˍ⊙)',
     '(⊙_⊙)？',
-    '（⊙ｏ⊙）',
-    'Σ(っ °Д °;)っ I forgor! I closed the input thingie!',
-    "ε=ε=ε=┏(゜ロ゜;)┛ I'll b right back!",
+    'Σ(っ °Д °;)っ I forgor! I closed the text thingy!',
+    "ε=ε=ε=┏(゜ロ゜;)┛ I'll be right back!",
     '...',
-    '. . .',
     'o(><；)oo Here!',
-    "つ﹏⊂ Sorry about this... I won't get in your way...",
-    'つ﹏⊂',
-    'つ﹏° ... You will not inject SQL... right?',
+    "つ﹏⊂ Sorry... I won't get in your way...",
     'つ﹏°',
   ]
 
@@ -37,16 +32,16 @@ export function textAreaFeedback() {
 
   function advanceTextAreaDialogue() {
     if (dialogueIndex < dialogue.length) {
-      if (dialogueIndex === 12) {
+      if (dialogueIndex === 9) {
         textArea.classList.remove('shy')
+      }
+      if (dialogueIndex === 9) {
+        const submitButton = document.querySelector('.submit-button')
+        submitButton.disabled = false
       }
       const currentDialogue = dialogue[dialogueIndex]
       feedbackDialogueParagraph.textContent = currentDialogue
       dialogueIndex++
-    }
-    if (dialogueIndex === 13) {
-      const submitButton = document.querySelector('.submit-button')
-      submitButton.disabled = false
     }
   }
   textArea.addEventListener('click', startTextAreaDialogue)
