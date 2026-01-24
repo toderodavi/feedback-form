@@ -1,18 +1,43 @@
 export function submitButton() {
   const submitButton = document.querySelector('.submit-button')
   const newTextAreaDialogue = document.createElement('p')
+  let count = 0
 
-  function submitForm() {
+  function submitForm(randomX, randomY) {
+    // For the future me:
+    // The element is being appended before receiving classes and styling
+    // Because you can't get the offset of a still not inserted DOM Element.
+    // Also, there are probably better ways of doing this - like using translateY(-50%)
+    // And safeproofing cases where the dialogue may go outside the screen
     const textAreaDialogue = document.querySelector('.feedback-dialogue')
     textAreaDialogue.remove()
+    document.body.append(newTextAreaDialogue)
     newTextAreaDialogue.classList.add('feedback-dialogue')
     newTextAreaDialogue.classList.add('textarea-holds-button')
     newTextAreaDialogue.textContent = "I'm holding! Click it! (。;>︿<)_θ"
-    document.body.append(newTextAreaDialogue)
+    newTextAreaDialogue.style.top = `${randomY - newTextAreaDialogue.offsetHeight * -0.75}px`
+    newTextAreaDialogue.style.left = `${randomX - newTextAreaDialogue.offsetWidth}px`
     setTimeout(() => {
       submitButton.disabled = false
       submitButton.addEventListener('click', blackScreen)
     }, 1500)
+  }
+
+  function randomlyMoveButton() {
+    const width = window.innerWidth - submitButton.offsetWidth + 50
+    const height = window.innerHeight - submitButton.offsetHeight + 50
+    let randomX = Math.floor(Math.random() * width) + 1
+    let randomY = Math.floor(Math.random() * height) + 1
+    count++
+
+    if (count >= 5) {
+      submitForm(randomX, randomY)
+    }
+    submitButton.style.position = 'fixed'
+    submitButton.style.width = `15rem`
+    submitButton.style.height = `6rem`
+    submitButton.style.top = `${randomY}px`
+    submitButton.style.left = `${randomX}px`
   }
 
   function blackScreen() {
@@ -31,24 +56,5 @@ export function submitButton() {
     blackOverlay.append(finalMessage02)
   }
 
-  function firstClick() {
-    submitButton.classList.add('position-01')
-    submitButton.addEventListener('click', secondClick)
-    submitButton.removeEventListener('click', firstClick)
-  }
-
-  function secondClick() {
-    submitButton.classList.add('position-02')
-    submitButton.addEventListener('click', thirdClick)
-    submitButton.removeEventListener('click', secondClick)
-  }
-
-  function thirdClick() {
-    submitButton.classList.add('position-03')
-    submitButton.disabled = true
-    submitForm()
-    submitButton.removeEventListener('click', thirdClick)
-  }
-
-  submitButton.addEventListener('click', firstClick)
+  submitButton.addEventListener('click', randomlyMoveButton)
 }
