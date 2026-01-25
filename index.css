@@ -278,6 +278,14 @@ Form User Section
   color: black;
 }
 
+.warning-paragraph {
+  position: absolute;
+  top: -2rem;
+  left: -1rem;
+  color: red;
+  text-wrap: nowrap;
+}
+
 .number-slider-div {
   display: flex;
   flex-direction: column;
