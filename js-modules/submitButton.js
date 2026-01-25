@@ -15,7 +15,7 @@ export function submitButton() {
     newTextAreaDialogue.classList.add('feedback-dialogue')
     newTextAreaDialogue.classList.add('textarea-holds-button')
     newTextAreaDialogue.textContent = "I'm holding! Click it! (。;>︿<)_θ"
-    newTextAreaDialogue.style.top = `${randomY - newTextAreaDialogue.offsetHeight * -0.75}px`
+    newTextAreaDialogue.style.top = `${randomY - newTextAreaDialogue.offsetHeight * -0.05}px`
     newTextAreaDialogue.style.left = `${randomX - newTextAreaDialogue.offsetWidth}px`
     submitButton.addEventListener('click', blackScreen)
   }
@@ -30,9 +30,10 @@ export function submitButton() {
     if (count >= 7) {
       submitForm(randomX, randomY)
     }
+
     submitButton.style.position = 'fixed'
-    submitButton.style.width = `15rem`
-    submitButton.style.height = `6rem`
+    submitButton.style.width = `${15 - 0.8 * count}rem`
+    submitButton.style.height = `${6 - 0.6 * count}rem`
     submitButton.style.top = `${randomY}px`
     submitButton.style.left = `${randomX}px`
   }
