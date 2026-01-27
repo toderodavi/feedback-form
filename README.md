@@ -1,7 +1,7 @@
 https://toderodavi.github.io/feedback-form/
 
 # About
-<img width="1419" height="821" alt="Project banner" src="https://github.com/user-attachments/assets/3d2fabed-e69b-4dd0-a43f-d85a8ee98ad6" />
+<img width="982" height="396" alt="frame 16" src="https://github.com/user-attachments/assets/4795207e-2721-423b-a8cb-4ae0bff5a58b" />
 
 
 This project was made for the Borked UI Jam! As the jam's idea was to create the worst UI/UX experience an user could have, I decided on creating a weird formulary, with the tematic of "you are dissatisfied with a service or product you received and wanted to give a feedback to the provider".
